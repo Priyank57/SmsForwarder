@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- App title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📲 SMS Forwarder"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A2E"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forwards all SMS to your JioBharat feature phone"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Status card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:textColor="#999999"
+                    android:letterSpacing="0.1" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏸ Forwarding is OFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Target number input -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JioBharat Phone Number"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="6dp" />
+
+        <EditText
+            android:id="@+id/et_target_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="+919876543210"
+            android:inputType="phone"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:background="@drawable/edittext_border"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Include country code, e.g. +91 for India"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save Number"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#4A90D9"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Forwarding toggle -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Enable Forwarding"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#333333" />
+
+            <Switch
+                android:id="@+id/sw_forwarding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- MIUI battery optimisation button -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#E0E0E0"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ Redmi / MIUI Setup"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MIUI aggressively kills background apps. Tap below to disable battery optimisation so forwarding stays active even when the screen is off."
+            android:textSize="13sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btn_battery_opt"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Disable Battery Optimisation"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E07B39"
+            android:layout_marginBottom="32dp" />
+
+    </LinearLayout>
+</ScrollView>
